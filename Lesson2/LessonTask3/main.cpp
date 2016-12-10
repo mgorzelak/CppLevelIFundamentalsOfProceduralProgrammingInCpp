@@ -1,19 +1,34 @@
 #include <iostream>
 
 using namespace std;
-// struct addTwoGates
-//struct addTwoGatesRef
+
+unsigned int addTwoGoals(unsigned int numberOfGoalsToAdd){
+numberOfGoalsToAdd = numberOfGoalsToAdd + 2;
+return numberOfGoalsToAdd;
+}
+
+unsigned int addTwoGoalsRef(unsigned int &numberOfGoalsToAdd){
+numberOfGoalsToAdd = numberOfGoalsToAdd + 2;
+return numberOfGoalsToAdd;
+}
 
 int main()
 {
     cout << "Number of goals"<< endl;
+    cout << endl;
+    unsigned int numberOfGoals=12;
+    cout<< "number of goals: "<<numberOfGoals<< endl;
 
     cout << endl;
-    unsigned int NumberOfGoals=12;
-    cout<< "number of goals is equal to: "<<NumberOfGoals<< endl;
 
-    unsigned int IncomeOfNumberOfGoals;
-    cout <<endl;
+    unsigned int incomeOfNumberOfGoals = addTwoGoals(numberOfGoals);
+    cout<< "number of goals ref: "<<incomeOfNumberOfGoals<< endl;
+    cout<< "number of goals: "<<numberOfGoals<< endl;
 
+   cout << endl;
+
+    incomeOfNumberOfGoals = addTwoGoalsRef(numberOfGoals);
+    cout<< "number of goals: "<<incomeOfNumberOfGoals<< endl;
+    cout<< "number of goals: "<<numberOfGoals<< endl;
     return 0;
 }

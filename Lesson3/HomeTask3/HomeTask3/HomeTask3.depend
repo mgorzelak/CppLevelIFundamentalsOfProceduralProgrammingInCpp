@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1481391797 source:d:\git\cpplevelifundamentalsofproceduralprogrammingincpp\lesson3\hometask3\hometask3\main.cpp
+	<iostream>
+	<math.h>
+

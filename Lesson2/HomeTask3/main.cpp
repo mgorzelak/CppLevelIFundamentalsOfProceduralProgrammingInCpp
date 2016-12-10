@@ -3,25 +3,27 @@
 using namespace std;
 int main()
 {
-    cout << "Home task2 i 3- deklaracja i typy zmiennych" << endl;
+    cout << "Home task3- deklaracja i typy zmiennych" << endl;
 
     cout << endl;
 
     string firstLetterOfName ("M");
     string surname("Gorzelak");
-    unsigned short temperature (20);
+    short temperature (20);
+    float temperatureInRationalNumber (-2.5);
     unsigned short numbersOfStudents (30);
-    unsigned short weight (55);
+    float weight (55.4);
     unsigned long long hightOfMontEverest (884800);
     bool isTheEmailBoxEmpty (true);
-    unsigned short numbersOfNeuronInHumanBrain (250000000000000);
-    long double numberPi (3.141592653589793238462643383279502884197169399375105820974944);
+    unsigned long long numbersOfNeuronInHumanBrain (250000000000000);
+    long double numberPi (3.14159265358979);
     unsigned long long numbersOfFacebookMembers (16500000000000);
 
     cout <<" firstLetterOfName: "<< firstLetterOfName<< endl;
     cout <<" surname: "<< surname<< endl;
-    cout << " temperature: "<< temperature<< " Celsius"<< endl;
     cout <<" weigh: "<< weight<< " kilograms"<< endl;
+    cout <<"temperature in Integer number: "<< temperature<< "  Celsius"<< endl;
+    cout <<"temperature in rational number: " <<temperatureInRationalNumber<< " Celsius"<< endl;
     cout << "number of students on the classroom : "<< numbersOfStudents<< endl;
     cout << "hight of MONT EVEREST: "<< hightOfMontEverest<< "cm "<<endl;
     cout <<  " isTheEmailBoxEmpty ? : "<<isTheEmailBoxEmpty<< "-  means true"<< endl;
