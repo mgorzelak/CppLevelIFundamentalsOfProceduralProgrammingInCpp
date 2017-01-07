@@ -12,14 +12,25 @@ int main()
 
      cout <<"podaj ile chesz miec wyrazow ciagu fibbonacciego: "<< endl;
      cin>> n;
-     cout <<"0\n";
-     for(int i=0;i<n-1;i++)
+     if (n==0)
      {
-            cout<<b<<" ";
-            b =b+ a; //pod zmienn¹ b przypisujemy wyraz nastêpny czyli a+b
-            a = b-a; //pod zmienn¹ a przypisujemy wartoœæ zmiennej b
-     }
+         cout << "0"<<endl;
 
+     }
+     else if (n==1){
+        cout<<"0 1"<<endl;
+     }
+     else
+     {
+         cout<< "0 1 ";
+         for(int i=2; i<=n-1; i++)
+         {
+                b =b+ a; //pod zmienn¹ b przypisujemy wyraz nastêpny czyli a+b
+                a = b-a; //pod zmienn¹ a przypisujemy wartoœæ zmiennej b
+                cout<<b<<" ";
+         }
+
+     }
     return 0;
 }
 
