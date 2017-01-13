@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1484307351 source:d:\git\cpplevelifundamentalsofproceduralprogrammingincpp\lesson4\hometask2\wielokat\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+

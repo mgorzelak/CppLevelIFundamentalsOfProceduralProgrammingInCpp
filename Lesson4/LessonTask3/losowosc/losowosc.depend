@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1483995630 source:d:\git\cpplevelifundamentalsofproceduralprogrammingincpp\lesson4\lessontask3\losowosc\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+
