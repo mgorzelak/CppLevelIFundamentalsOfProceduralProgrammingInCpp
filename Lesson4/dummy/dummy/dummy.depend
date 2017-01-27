@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1485088778 source:d:\git\cpplevelifundamentalsofproceduralprogrammingincpp\lesson4\dummy\dummy\main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1485287553 source:d:\git\cpplevelifundamentalsofproceduralprogrammingincpp\lesson4\hometask3\przedmioty\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+

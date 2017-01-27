@@ -17,7 +17,7 @@ int main()
     cout <<" wprowadz liczbe od 1 do 30"<<endl;
     cin>>nrProvided;
     cout<<endl;
-    cout << "Pomyslalem liczbie od 1 do 30" << endl;
+    //cout << "Pomyslalem liczbie od 1 do 30" << endl;
 
       do
     {

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1485544848 source:d:\git\cpplevelifundamentalsofproceduralprogrammingincpp\lesson5\lekcja4 - zdania do zrobienia w domu -  zadanie 2\wielokat\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+

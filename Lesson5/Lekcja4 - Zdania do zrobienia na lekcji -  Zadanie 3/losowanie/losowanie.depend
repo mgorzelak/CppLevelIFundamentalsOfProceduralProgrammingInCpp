@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1485530676 source:d:\git\cpplevelifundamentalsofproceduralprogrammingincpp\lesson5\lekcja4 - zdania do zrobienia na lekcji -  zadanie 3\losowanie\main.cpp
+	<iostream>
+	<cstdlib>
+	<time.h>
+
