@@ -7,9 +7,9 @@ int a,b;
 
 int inputNumberFrom1To30 ()
 {
-
-    cin>>a;
-   return a;
+    int number;
+    cin>>number;
+   return number;
 }
 
 //int randNumberFrom1To30 ()
@@ -27,7 +27,7 @@ int main()
 
     int nrTrialas=0;
 
-    inputNumberFrom1To30();
+    a = inputNumberFrom1To30();
 
 do
    {

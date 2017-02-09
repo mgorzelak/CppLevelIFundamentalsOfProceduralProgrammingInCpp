@@ -4,35 +4,59 @@
 
 using namespace std;
 
-unsigned int SIZE_OF_ARRAY;
-int nrOfAngels;
+const unsigned int SIZE_OF_ARRAY = 20;
+unsigned int nrOfAngels [SIZE_OF_ARRAY];
 
-
-int sizeOfArray()
+void checkHowManySides ()
 {
-    unsigned const int SIZE_OF_ARRAY = 20;
-    unsigned int nrOfAngels[SIZE_OF_ARRAY];
-
-    return SIZE_OF_ARRAY;
-}
-
-bool checkIfPossibleToBulidPolygon ()
-{
-    if(SIZE_OF_ARRAY<3){
-
-        return false;
+    if(SIZE_OF_ARRAY<3)
+    {
+        cout<<"nie da sie zbudowac wielokata"<<endl;
     }
     else
-    return true;
+    {
+
+        if (SIZE_OF_ARRAY<7)
+        {
+            for(unsigned int i=0; i<SIZE_OF_ARRAY; i++)
+            {
+                cout<<"podaj dl boku: "<<endl;
+                cin>>nrOfAngels[i];
+            }
+        }
+        else
+        {
+            for(unsigned int i=0; i<SIZE_OF_ARRAY; i++)
+            {
+                nrOfAngels[i]= rand ()%12+1;
+            }
+        }
+    }
+
+}
+unsigned int countCircuit()
+{
+    unsigned int circuit = 0;
+    for(unsigned int i=0; i<SIZE_OF_ARRAY; i++)
+    {
+        circuit=circuit+nrOfAngels[i];
+    }
+    cout<<"obowd wynosi: "<<circuit<<endl;
+    return circuit;
 }
 
-    int main()
-    {
-        cout << "wielokat- funkcje wlasne!" << endl;
-        srand (time(NULL));
+int main()
+{
+    cout << "wielokat- funkcje wlasne!" << endl;
+    srand (time(NULL));
 
-        sizeOfArray();
-        checkIfPossibleToBulidPolygon ();
-        cout<<"sprawdz czy da sie zbudowac: "<<checkIfPossibleToBulidPolygon()<<endl;
-        return 0;
-    }
+        checkHowManySides();
+
+        if(SIZE_OF_ARRAY > 2)
+        {
+            countCircuit();
+        }
+
+
+    return 0;
+}

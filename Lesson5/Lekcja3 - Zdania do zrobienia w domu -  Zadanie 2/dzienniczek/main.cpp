@@ -1,49 +1,61 @@
 #include <iostream>
 
 using namespace std;
+string name, surname, nameOfSchool;
+unsigned int numberOfClass;
 
-string  inputData()
+unsigned int profileOfTheClass;
+
+string additionalCourses;
+
+bool checkAdditionalCourses ()
 {
-    string name, surname, nameOfSchool;
-    cout<<"wprowadz imie, nazwisko ucznia oraz nazwe szkoly"<<endl;
+    bool isParticipantAddtionalCourses = false;
+    cout<<"Czy uczen uczeszcza na zajecia dodatkowe, wpisz true or false"<<endl;
+    cin>>isParticipantAddtionalCourses;
+    return isParticipantAddtionalCourses;
+}
+
+void inputData()
+{
+    cout<<"wprowadz imie"<<endl;
     cin>>name;
+    cout<<"wprowadz nazwisko ucznia " <<endl;
     cin>>surname;
+    cout<<"wprowadz nazwe szkoly"<<endl;
     cin>>nameOfSchool;
-    return name, surname, nameOfSchool;
 }
 
 void  showData()
 {
-    string name, surname, nameOfSchool;
-    cout<<"imie, nazwisko ucznia nazwe szkoly"<<name<<endl;
-}
-
-void coursesPrimary ()
-{
-    cout<<" przedmioty na ktore uczeszcza uczen to jezyk polski, matematyka i WF"<<endl;
-}
-void coursesGim ()
-{
-    cout<<" przedmioty na ktore uczeszcza uczen to jezyk polski, matematyka, WF, fizyka i chemia"<<endl;
-}
-bool additionalCourses ()
-{
-    bool addtionalCourses;
-    cout<<"czy uczen uczeszcza na zajecia dodatkowe, wpisz true or false"<<endl;
-    if(addtionalCourses==1)
+    cout<<"imie ucznia "<<name<<endl;
+    cout<<"nazwisko ucznia "<<surname<<endl;
+    cout<<"nazwa szkoly "<<nameOfSchool<<endl;
+    cout<<"nrKlasy klasy "<<numberOfClass<<endl;
+    cout<<"profil klasy "<<profileOfTheClass<<endl;
+    if(checkAdditionalCourses())
     {
-     cin>>addtionalCourses;
-     cout<<"wpisz jakie to kursy: "<<endl;
-     string kurs1, kurs2, kurs3;
-     cin>>kurs1>>kurs2>>kurs3;
-
+        cout<<"Uczen uczeszcza na dodatkowe kursy :"<<additionalCourses<<endl;
     }
     else
+    {
+        cout<<"Uczen nie uczeszcza na zajecia dodatkowe"<<endl;
+    }
 
-
-
-    return false;
 }
+void showCourses(unsigned int levelOfEducation)
+{
+    if(levelOfEducation==1)
+    {
+        cout<<" przedmioty na ktore uczeszcza uczen to jezyk polski, matematyka i WF"<<endl;
+    }
+    else
+    {
+        cout<<" przedmioty na ktore uczeszcza uczen to jezyk polski, matematyka, WF, fizyka i chemia"<<endl;
+    }
+}
+
+
 int main()
 {
     cout << "dzieniczek- funkcje wlasne" << endl;
@@ -59,37 +71,39 @@ int main()
     {
     case 1:
         cout << "Podstawowka"<< endl;
-        unsigned int numberOfClass;
+
         cout << "wybierz klase: 1-6 podstawowka "<< endl;
         cin >> numberOfClass;
-        unsigned int profileOfTheClass;
+
         cout << "wybierz profil klasy: "<< endl;
         cout << "1.Matematyczna"<< endl;
         cout <<"2.Biologiczna" <<endl;
         cout <<"3.Ogolna"<< endl;
         cin >> profileOfTheClass;
-        coursesPrimary();
+
         break;
 
     case 2:
         cout << "Gimanzjum"<< endl;
-        unsigned int numberOfClassesInGim;
+
         cout <<"wybierz klase 1-3 Gimanzjum" << endl;
-        cin>> numberOfClassesInGim;
-        unsigned int profileOfTheClassGim;
+        cin>> numberOfClass;
+
         cout << "wybierz profil klasy: "<< endl;
         cout << "1.Matematyczna"<< endl;
         cout <<"2.Biologiczna" <<endl;
         cout <<"3.Ogolna"<< endl;
-        cin >> profileOfTheClassGim;
-
-        showData();
-
-
-        coursesGim();
+        cin >> profileOfTheClass;
 
         break;
     }
-     additionalCourses();
+
+    if(checkAdditionalCourses())
+    {
+        cin.ignore();
+        cout << "Podaj nazwy kursow: " << endl;
+        getline(cin, additionalCourses);
+    }
+    showData();
     return 0;
 }
